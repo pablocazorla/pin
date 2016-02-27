@@ -8,6 +8,23 @@
 	border-bottom: dotted 2px #CCC;
 }
 
+.pg-def{
+	padding: 20px 0;
+	border-bottom: 1px dotted #DDD;
+}
+
+.pg-def-tit{
+	display: block;
+	margin: 0 0 20px;
+	font-size: 18px;
+	line-height: 1.1;
+}
+.pg-def-tit:before{
+	content: '<';
+}
+.pg-def-tit:after{
+	content: '>';
+}
 
 
 

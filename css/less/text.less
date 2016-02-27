@@ -96,19 +96,89 @@ ol.list{
 a,.a{
 	text-decoration:none;
 	cursor: pointer;
+	color: @a-color;
 	&:hover{
 		text-decoration:underline;
 	}
 }
+
+abbr,.abbr,
+acronym{
+	text-decoration: none;
+}
+ins,.ins,
+u,.u{
+	text-decoration: underline;
+}
+
+mark,.mark{
+	display: inline-block;
+	background-color: @mark-color;
+	padding: 0 0.5em;
+}
+
+sub,.sub{
+	vertical-align: sub;
+}
+sup,.sup{
+	vertical-align: super;
+}
+
+
+
+
+
+code,.code,
+kbd,.kbd,
+pre,.pre{
+	font-family: monospace;
+	display: inline-block;
+	border: 1px solid @grey;
+	padding: 0 0.5em;
+}
+
+
+del,.del,
+s,.s,
+strike,.strike{
+	text-decoration: line-through;
+}
+
+
+abbr,.abbr,acronym,
+address,.address,
+blockquote,.blockquote,
+cite,.cite,
+em,.em,
+i,.i,
+q,.q,
+time,.time,
+var,.var{
+	font-style:italic;
+}
+
 b,.b,
-strong,.strong{
+strong,.strong,
+dfn,.dfn,
+em,.em{
 	font-weight: bold;
 }
 
+address,.address,
+blockquote,.blockquote,
+pre,.pre{
+	display: block;
+}
+
+
+
+
+
+/**** TEXT SIZES *********************************/
 small,.small {
     font-size: 75%;
 }
-.big {
+big,.big {
     font-size: 140%;
 }
 .biggest {
