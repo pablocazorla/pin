@@ -1,0 +1,133 @@
+/**** HEADERS & TITLES **********************************************/
+.h1,.title-1{
+	font-size: 5 * @un;
+}
+.h2,.title-2{
+	font-size: 4 * @un;
+}
+.h3,.title-3{
+	font-size: 3 * @un;
+}
+.h4,.title-4{
+	font-size: 2.2 * @un;
+}
+.h5,.title-5{
+	font-size: 2 * @un;
+}
+.h6,.title-6{
+	font-size: 1.2 * @un;
+}
+.h1,.title-1,
+.h2,.title-2,
+.h3,.title-3{
+	font-weight: 300
+}
+.h4,.title-4,
+.h5,.title-5,
+.h6,.title-6{
+	font-weight: 700
+}
+.h1,.title-1,
+.h2,.title-2,
+.h3,.title-3,
+.h4,.title-4,
+.h5,.title-5,
+.h6,.title-6{
+	display: block;
+	line-height: @line-height-title;
+	margin-bottom:@margin-bottom;
+	padding-top: 1.75 * @un;
+}
+
+/**** PARAGRAPH **********************************************/
+.p,.paragraph{
+	display: block;
+	margin-bottom:@margin-bottom;
+}
+
+/**** LIST **********************************************/
+.ul-list{
+	list-style-type: disc;
+}
+.ol-list{
+	list-style-type: decimal;
+}
+.list{
+	list-style: none inside none;
+	margin-bottom:@margin-bottom;
+	& ul,
+	& ol{
+		margin-bottom:0;
+	}
+	& ul{
+		list-style-type: circle;
+		padding-left: 2 * @un;
+	}
+	& ul ul,
+	& ol ul{
+		list-style-type: square;
+	}
+	& ol{
+		list-style-type: upper-alpha;
+		padding-left: 2 * @un;
+	}
+	& ol ol,
+	& ul ol{
+		list-style-type: lower-roman;
+	}
+	& ul,
+	& ol,
+	& ul ul,
+	& ol ul,
+	& ol ol,
+	& ul ol{
+		padding-top: 0.5 * @un;
+		padding-bottom: 1 * @un;
+	}
+}
+ul.list{
+	.ul-list;
+}
+ol.list{
+	.ol-list;
+}
+
+/**** TEXT VARIANTS **********************************************/
+a,.a{
+	text-decoration:none;
+	cursor: pointer;
+	&:hover{
+		text-decoration:underline;
+	}
+}
+b,.b,
+strong,.strong{
+	font-weight: bold;
+}
+
+small,.small {
+    font-size: 75%;
+}
+.big {
+    font-size: 140%;
+}
+.biggest {
+    font-size: 180%;
+}
+
+
+
+
+
+/**** ALL IN TEXTBLOCK **********************************************/
+.textblock{
+	h1{ .h1;}
+	h2{ .h2;}
+	h3{ .h3;}
+	h4{ .h4;}
+	h5{ .h5;}
+	h6{ .h6;}
+	p{.p;}
+	ul{.list;.ul-list;}
+	ol{.list;.ol-list;}
+}

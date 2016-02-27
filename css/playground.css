@@ -1,0 +1,13 @@
+#playbox-container{}
+
+
+.playbox{
+	margin:20px auto;
+	max-width: 1000px;
+	padding-bottom: 30px;
+	border-bottom: dotted 2px #CCC;
+}
+
+
+
+

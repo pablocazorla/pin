@@ -1,0 +1,19 @@
+.btn {
+  display: inline-block;
+  line-height: @btn-line-height;
+  padding: 0 @btn-padding;
+  background-image: none;
+  background-color: @btn-background-color;
+  cursor: pointer;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+
+  border: solid @btn-border-width @btn-border-color;
+
+  .user-select-none;
+
+  &:hover {
+    text-decoration: none;
+  }
+}

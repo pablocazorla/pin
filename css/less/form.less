@@ -1,0 +1,128 @@
+fieldset{
+	margin: 0 0 @margin-bottom;
+}
+
+label{
+	vertical-align: middle;
+}
+
+input[type=text],
+input[type=email],
+input[type=url],
+input[type=password],
+input[type=search],
+input[type=tel],
+input[type=date],
+input[type=time],
+input[type=week],
+input[type=month],
+input[type=datetime],
+input[type=datetime-local],
+input[type=number],
+input[type=color],
+input[type=file],
+textarea,
+select{
+	padding: 0 @input-padding;
+	line-height: @input-line-height;
+	border: solid @btn-border-width @btn-border-color;
+	vertical-align: middle;
+	display: block;
+	.box-sizing-border;
+}
+
+textarea{
+	min-height:6em;
+	resize:vertical;
+}
+
+
+
+input[type=text],
+input[type=email],
+input[type=url],
+input[type=password],
+input[type=search],
+textarea{
+	width: 100%;
+}
+
+input[type=tel],
+input[type=date],
+input[type=time],
+input[type=week],
+input[type=month],
+input[type=datetime],
+input[type=datetime-local],
+input[type=number],
+input[type=range],
+select{
+	width: auto;
+  min-width: 24%;
+  max-width: 100%;
+}
+
+select{	
+	-webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;  
+  height: @input-line-height;
+
+ .box-sizing-content;
+ text-align: center;
+
+ padding-right: 20px;
+
+	background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' height='5' width='16'><path d='m 0,0 5,5 5,-5 z' style='fill:grey'/></svg>");
+	background-repeat: no-repeat;
+	background-position: right center;
+
+	option{
+		padding: 0;
+	}
+}
+
+input[type=color]{
+	-webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;  
+  padding: 0;
+  width: 1.5em;
+  height: 1.5em;
+  background-color: transparent;
+  background-image:none;
+}
+
+input[type=file]{
+	-webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;  
+}
+
+input[type=reset],
+input[type=submit],
+input[type=button],
+input[type=image],
+button{
+	.btn;
+}
+
+input[type=range]{
+/*-webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;*/
+  	display: block;
+  	margin: 0;
+}
+
+input[type=radio],
+input[type=checkbox]{
+	vertical-align: middle;
+	cursor: pointer;
+	margin: 0 0.5em 0 0;
+
+	& + label{
+		display: inline-block;
+		cursor: pointer;
+	}
+}
