@@ -1,32 +1,73 @@
 // SIZES **************************************************
-@un: 8px;
-
-// TEXT SIZES
-@font-size: 1.75 * @un;
+@rem: 10px;
+// TEXT
+@font-size: 1.4 * @rem;
 @line-height:1.5;
 @line-height-title:1.1;
-@margin-bottom: 2 * @un;
+@margin-bottom: @font-size;
 
-// BUTTON SIZES
+// THEME COLOURS
+
+@base-color: #FFF;
+@base-alt-color: #333;
+
+@primary-color: #00C8FF;
+@primary-alt-color: #FFF;
+
+@secondary-color: #A09657;
+@secondary-alt-color: #FFF;
+
+@grey-color: #f0f0f0;
+@grey-alt-color: #222;
+
+@dark-color: #333;
+@dark-alt-color: #EEE;
+
+@link-color:#29F;
+@mark-color:#FF0;
+@border-color:#DDD;
+
+// ACTION COLOURS
+@danger-color: #FF2525;
+@danger-alt-color: #FFF;
+
+@warning-color: #F1C000;
+@warning-alt-color: #FFF;
+
+@success-color: #02C500;
+@success-alt-color: #FFF;
+
+// Shapes
+@round-border-radius:4px;
+
+
+// BUTTON
 @btn-padding: 1.2em;
 @btn-line-height: 2.4em;
 @btn-border-width: 1px;
+@btn-background-color:@grey-color;
+@btn-border-color:@grey-color;
 
-// INPUT SIZES
+// INPUT
 @input-padding: 0.5 * @btn-padding;
 @input-line-height: @btn-line-height;
 @input-border-width:@btn-border-width;
+@input-border-color:@border-color;
+@input-focus-border-color:@primary-color;
 
+// TABLE
+@table-border-color: @border-color;
+@table-padding: 0.8 * @rem 1 * @rem;
+@table-padding-wide: 3 * @rem 1.5 * @rem;
+@table-thead-background-color:@grey-color;
 
+// GRID
+@container-max-width:1200px;
+@gap-default:3 * @rem;
 
-// 3. COLOURS
-@grey:#DDD;
-@a-color:#29F;
-@mark-color:#FF0;
+@screen-sm:640px;
+@screen-md:990px;
+@screen-lg:991px;
 
-// BUTTON COLOURS
-@btn-background-color:lighten(@grey, 5%);
-@btn-border-color:@grey;
-
-// INPUT COLOURS
-@input-border-color:@btn-border-color;
+// PRE
+@pre-background-color:@grey-color;

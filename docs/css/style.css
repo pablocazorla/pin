@@ -1,0 +1,107 @@
+body{
+	overflow-y: scroll;
+}
+.doc-page{
+	margin: 30px 0;
+}
+#doc-index{
+	border-right: solid 1px #DDD;
+	padding-bottom: 30px;
+	padding-right: 36px;
+}
+#doc-index .active{
+	font-weight: bold;
+}
+.doc-group{
+	margin: 0 0 30px;
+}
+#doc-content{
+	border-left: solid 1px #DDD;
+	padding-left: 36px;
+	padding-bottom: 60px;
+	position: relative;
+	left:-1px;
+}
+
+.title-1.doc-title{
+	border-bottom: 1px solid #DDD;
+}
+.doc-title{
+	color: #1891B3;
+}
+
+.doc-tabs{
+	border-bottom: 1px dotted #DDD;
+}
+.doc-tab{
+	display: inline-block;
+	line-height: 25px;
+	padding: 0 10px;
+	border-bottom: 3px solid transparent;
+	position: relative;
+	top:2px;
+	color: #999;
+	cursor:pointer;
+}
+.doc-tab.doc-tab-current{
+	border-bottom-color:#00C8FF;
+	color: #222;
+	cursor:default;
+}
+.doc-box,
+.doc-pre-content{
+	padding: 16px 0 8px;
+}
+hr{
+	margin-bottom: 26px;
+}
+.doc-box hr{
+	margin-bottom: 0;
+}
+
+
+
+.doc-ex-title{
+	font-size: 86%;
+	padding: 5px 9px;
+	border-left: 3px solid #00C8FF;
+	background-color: #f6f6f6;
+	margin-bottom: 10px;
+}
+.doc-ex-title code{
+	background-color: #FFF;
+	font-weight: bold;
+	border-radius: 3px;
+	color: #666;
+}
+.doc-ex{
+	padding: 15px 20px 5px;
+	border: 1px solid #DDD;
+	margin-bottom: 20px;
+}
+.doc-note{
+	background-color: #E6FAFF;
+	color: #0085AA;
+	padding: 15px;
+	border-left: 3px solid #00C8FF;
+}
+
+
+.doc-table-wide th,
+.doc-table-wide td{
+	padding:30px 15px;
+}
+.doc-table-wide pre{
+	margin-bottom: 0;
+}
+
+
+
+.col-content{
+	line-height: 80px;
+	background-color: #EEE;
+	border:1px solid #DDD;
+	text-align: center;
+	margin-bottom: 20px;
+	overflow: hidden;
+}

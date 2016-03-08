@@ -1,3 +1,149 @@
-.border-shadow(@width,@color){
-	box-shadow: inset 0 0 0 @width @color;
+.transition(@t){
+  -webkit-transition:@t;
+  -ms-transition:@t;
+  transition:@t;
+}
+
+.animation(@a){
+  -webkit-animation: @a;
+  -moz-animation:    @a;
+  -o-animation:      @a;
+  animation:         @a;
+}
+
+.border-shadow(@width, @color) {
+  box-shadow: inset 0 0 0 @width @color;
+}
+// GRID FUNCTIONS
+.gap-margin(@g) {
+  margin-left: -0.5 * @g * @rem;
+  margin-right: -0.5 * @g * @rem;
+}
+.gap-padding(@g) {
+  padding-left: 0.5 * @g * @rem;
+  padding-right: 0.5 * @g * @rem;
+}
+.gap-construct(@g) {
+  &.row,
+  & > .row {
+    .gap-margin(@g);
+    & > .col {
+      .gap-padding(@g);
+    }
+  }
+  
+}
+.gap-flex-construct(@g) {
+  .gap-margin(@g);
+  .flex-item {
+    .gap-padding(@g);
+  }
+}
+.grid-construct(@c) {
+  .col {
+    width: percentage(1 / @c);
+  }
+}
+.col-construct(@c, @t) {
+  width: percentage(@c / @t);
+}
+.col-offset-construct(@c, @t) {
+  margin-left: percentage(@c / @t);
+}
+
+
+// Buttons
+.btn-color-construct(@bg-color, @color,@b-color, @hover-option:lighten){
+  background-color: @bg-color;
+  color:@color;
+  border-color: @b-color;
+
+  -webkit-transition:background-color .1s,color .1s;
+  -ms-transition:background-color .1s,color .1s;
+  transition:background-color .1s,color .1s;
+
+
+  &:hover when (@hover-option = darken) {
+    background-color: darken(@bg-color, 10%);
+    border-color: darken(@bg-color, 10%);
+  }
+  &:hover when (@hover-option = lighten) {
+    background-color: lighten(@bg-color, 10%);
+    border-color: lighten(@bg-color, 10%);
+  }  
+  &:hover when (@hover-option = underline) {
+    text-decoration: underline;
+  }
+  &.active when (@hover-option = darken) {
+    background-color: darken(@bg-color, 15%);
+    border-color: darken(@bg-color, 15%);
+  }
+  &.active when (@hover-option = lighten) {
+    background-color: lighten(@bg-color, 15%);
+    border-color: lighten(@bg-color, 15%);
+  }
+  &.active when (@hover-option = underline) {
+    text-decoration: underline;
+  }
+  &:focus,
+  &.focus {
+    background-color: darken(@bg-color, 15%);
+    border-color: darken(@bg-color, 15%);
+  }
+  
+  &.inverted {
+    background-color: @color;
+    color:@bg-color;
+    &:hover{
+      background-color: @bg-color;
+      color:@color;
+    }
+  }
+  &.inverted {
+    background-color: @color;
+    color:@bg-color;
+    border-color: @color;
+    &:hover{
+      background-color: @bg-color;
+      color:@color;
+      border-color: @b-color;
+    }
+  }
+  &.linear{
+    background-color: transparent;
+    color: @bg-color;
+    &:hover{
+      background-color: @bg-color;
+      color:@color;
+    }
+  }
+
+  &.over-image{
+    background-color: @base-color;
+    border-color: @base-color;
+    color: @bg-color;
+    &:hover{
+      background-color: transparent;
+      color: @base-color;
+    }
+    &.linear{
+      background-color: transparent;
+      color: @base-color;
+      &:hover{
+        background-color: @base-color;
+        color:@bg-color;
+      }
+    }
+  }
+  
+  
+}
+
+.border-radius(@b){
+  border-radius: @b;
+}
+
+
+.box-shadow-1 {
+  box-shadow: 0 1px 3px rgba(0,0,0,.5);
 }

@@ -1,203 +1,228 @@
 /**** HEADERS & TITLES **********************************************/
-.h1,.title-1{
-	font-size: 5 * @un;
+
+.h1,
+.title-1 {
+  font-size: 4 * @rem;
 }
-.h2,.title-2{
-	font-size: 4 * @un;
+.h2,
+.title-2 {
+  font-size: 3 * @rem;
 }
-.h3,.title-3{
-	font-size: 3 * @un;
+.h3,
+.title-3 {
+  font-size: 2.4 * @rem;
 }
-.h4,.title-4{
-	font-size: 2.2 * @un;
+.h4,
+.title-4 {
+  font-size: 1.8 * @rem;
 }
-.h5,.title-5{
-	font-size: 2 * @un;
+.h5,
+.title-5 {
+  font-size: 1.4 * @rem;
 }
-.h6,.title-6{
-	font-size: 1.2 * @un;
+.h6,
+.title-6 {
+  font-size: 1.2 * @rem;
 }
-.h1,.title-1,
-.h2,.title-2,
-.h3,.title-3{
-	font-weight: 300
+.h1,
+.title-1,
+.h2,
+.title-2,
+.h3,
+.title-3{
+  font-weight: 300
 }
-.h4,.title-4,
-.h5,.title-5,
-.h6,.title-6{
-	font-weight: 700
+.h5,
+.title-5,
+.h6,
+.title-6 {
+  font-weight: 700
 }
-.h1,.title-1,
-.h2,.title-2,
-.h3,.title-3,
-.h4,.title-4,
-.h5,.title-5,
-.h6,.title-6{
-	display: block;
-	line-height: @line-height-title;
-	margin-bottom:@margin-bottom;
-	padding-top: 1.75 * @un;
+.h1,
+.title-1,
+.h2,
+.title-2,
+.h3,
+.title-3,
+.h4,
+.title-4,
+.h5,
+.title-5,
+.h6,
+.title-6 {
+  display: block;
+  line-height: @line-height-title;
+  margin-bottom: @margin-bottom;
+  padding-top: @margin-bottom;
 }
 
 /**** PARAGRAPH **********************************************/
-.p,.paragraph{
-	display: block;
-	margin-bottom:@margin-bottom;
-}
 
-/**** LIST **********************************************/
-.ul-list{
-	list-style-type: disc;
-}
-.ol-list{
-	list-style-type: decimal;
-}
-.list{
-	list-style: none inside none;
-	margin-bottom:@margin-bottom;
-	& ul,
-	& ol{
-		margin-bottom:0;
-	}
-	& ul{
-		list-style-type: circle;
-		padding-left: 2 * @un;
-	}
-	& ul ul,
-	& ol ul{
-		list-style-type: square;
-	}
-	& ol{
-		list-style-type: upper-alpha;
-		padding-left: 2 * @un;
-	}
-	& ol ol,
-	& ul ol{
-		list-style-type: lower-roman;
-	}
-	& ul,
-	& ol,
-	& ul ul,
-	& ol ul,
-	& ol ol,
-	& ul ol{
-		padding-top: 0.5 * @un;
-		padding-bottom: 1 * @un;
-	}
-}
-ul.list{
-	.ul-list;
-}
-ol.list{
-	.ol-list;
+.p,
+.paragraph {
+  display: block;
+  margin-bottom: @margin-bottom;
 }
 
 /**** TEXT VARIANTS **********************************************/
-a,.a{
-	text-decoration:none;
-	cursor: pointer;
-	color: @a-color;
-	&:hover{
-		text-decoration:underline;
-	}
+
+a,
+.a {
+  text-decoration: none;
+  cursor: pointer;
+  color: @link-color;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+abbr,
+.abbr,
+acronym {
+  text-decoration: none;
+}
+ins,
+.ins,
+u,
+.u {
+  text-decoration: underline;
+}
+mark,
+.mark {
+  display: inline-block;
+  background-color: @mark-color;
+  padding: 0 0.5em;
+}
+sub,
+.sub {
+  vertical-align: sub;
+}
+sup,
+.sup {
+  vertical-align: super;
+}
+code,
+.code,
+kbd,
+.kbd,
+pre,
+.pre {
+  font-family: monospace;
+  display: inline-block;
+  border: 1px solid @border-color;
+  padding: 0 0.5em;
+  background-color: @grey-color;
+}
+del,
+.del,
+s,
+.s,
+strike,
+.strike {
+  text-decoration: line-through;
+}
+abbr,
+.abbr,
+acronym,
+address,
+.address,
+blockquote,
+.blockquote,
+cite,
+.cite,
+em,
+.em,
+i,
+.i,
+q,
+.q,
+time,
+.time,
+var,
+.var {
+  font-style: italic;
+}
+b,
+.b,
+strong,
+.strong,
+dfn,
+.dfn,
+em,
+.em {
+  font-weight: bold;
+}
+address,
+.address,
+blockquote,
+.blockquote,
+pre,
+.pre {
+  display: block;
 }
 
-abbr,.abbr,
-acronym{
-	text-decoration: none;
+/**** blockquote *********************************/
+blockquote,
+.blockquote{
+  background-color: fade(@dark-color,10%);
+  border-left: 3px solid @primary-color;
+  padding: 1.1em 2em;
+  margin: 0 2em @margin-bottom;
 }
-ins,.ins,
-u,.u{
-	text-decoration: underline;
-}
-
-mark,.mark{
-	display: inline-block;
-	background-color: @mark-color;
-	padding: 0 0.5em;
-}
-
-sub,.sub{
-	vertical-align: sub;
-}
-sup,.sup{
-	vertical-align: super;
-}
-
-
-
-
-
-code,.code,
-kbd,.kbd,
-pre,.pre{
-	font-family: monospace;
-	display: inline-block;
-	border: 1px solid @grey;
-	padding: 0 0.5em;
-}
-
-
-del,.del,
-s,.s,
-strike,.strike{
-	text-decoration: line-through;
-}
-
-
-abbr,.abbr,acronym,
-address,.address,
-blockquote,.blockquote,
-cite,.cite,
-em,.em,
-i,.i,
-q,.q,
-time,.time,
-var,.var{
-	font-style:italic;
-}
-
-b,.b,
-strong,.strong,
-dfn,.dfn,
-em,.em{
-	font-weight: bold;
-}
-
-address,.address,
-blockquote,.blockquote,
-pre,.pre{
-	display: block;
-}
-
-
-
-
 
 /**** TEXT SIZES *********************************/
-small,.small {
-    font-size: 75%;
+
+small,
+.small {
+  font-size: 65%;
 }
-big,.big {
-    font-size: 140%;
+big,
+.big {
+  font-size: 175%;
 }
 .biggest {
-    font-size: 180%;
+  font-size: 250%;
 }
 
-
-
-
-
 /**** ALL IN TEXTBLOCK **********************************************/
-.textblock{
-	h1{ .h1;}
-	h2{ .h2;}
-	h3{ .h3;}
-	h4{ .h4;}
-	h5{ .h5;}
-	h6{ .h6;}
-	p{.p;}
-	ul{.list;.ul-list;}
-	ol{.list;.ol-list;}
+
+.textblock {
+  h1 {
+    .h1;
+  }
+  h2 {
+    .h2;
+  }
+  h3 {
+    .h3;
+  }
+  h4 {
+    .h4;
+  }
+  h5 {
+    .h5;
+  }
+  h6 {
+    .h6;
+  }
+  p {
+    .p;
+  }
+}
+
+/* pre *************************/
+
+pre,
+.pre {
+  font-family: monospace;
+  padding: @rem;
+  overflow: hidden;
+  overflow-y: scroll;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+  border: 1px solid @border-color;
+  margin-bottom: @margin-bottom;
+  background-color: @pre-background-color;
 }

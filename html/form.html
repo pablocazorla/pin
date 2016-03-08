@@ -2,6 +2,7 @@
 <h3 class="h3">Example:</h3>
 <form>
   <fieldset>
+    <legend>Personal data:</legend>
     <label>Name:</label>
     <input type="text" value="" placeholder="Enter your name here...">
   </fieldset>
@@ -88,6 +89,37 @@
     <input type="month" value="" placeholder="Month">
   </fieldset>
   <fieldset>
+    <label>Select:</label>
+    <select>
+      <optgroup label="America">
+        <option value="1">Argentina</option>
+        <option value="2">Brazil</option>
+        <option value="3">Chile</option>
+      </optgroup>
+      <optgroup label="Europe">
+        <option value="1">Spain</option>
+        <option value="2">France</option>
+        <option value="3">Germany</option>
+      </optgroup>
+    </select>
+  </fieldset>
+  <fieldset>
+    <label>Keygen:</label>
+    <keygen name="security" />
+  </fieldset>
+  <fieldset>
+    <label>Datalist:</label>
+    <input type="text" value="" placeholder="Press 'e'..." list="dl-browsers">
+    <datalist id="dl-browsers">
+      <option value="Internet Explorer" />
+      <option value="Firefox" />
+      <option value="Chrome" />
+      <option value="Edge" />
+      <option value="Opera" />
+      <option value="Safari" />
+    </datalist>
+  </fieldset>
+  <fieldset>
     <label>Color:</label>
     <input type="color" value="" placeholder="Color">
   </fieldset>
@@ -102,6 +134,12 @@
   <fieldset>
     <label>Range:</label>
     <input type="range" value="" placeholder="Range">
+  </fieldset>
+  <fieldset oninput="outputAB.value=parseInt(nInputA.value)+parseInt(nInputB.value)">
+    <label>Output:</label>
+    <input class="inline" type="number" id="nInputA" value="50"> +
+    <input class="inline" type="number" id="nInputB" value="" placeholder="Enter some value..."> =
+    <output class="inline-block" name="outputAB"></output>
   </fieldset>
   <fieldset>
     <h3 class="h3">input Buttons</h3>

@@ -6,7 +6,7 @@ $('document').ready(function() {
 		readySources = 0,
 		$container = $('#playbox-container'),
 		successSource = function(data) {
-			var source = $('<div class="playbox">' + data + '</div>');
+			var source = $('<div class="playbox container">' + data + '</div>');
 			$container.append(source);
 			readySources++;
 		};
@@ -30,6 +30,9 @@ $('document').ready(function() {
 			};
 			vm.p = function(){
 				return Lipsum.paragraph();
+			};
+			vm.n = function(){
+				return Lipsum.num();
 			};
 			vm.li = function(){
 				return Lipsum.li();

@@ -24,9 +24,13 @@
   <script src="js/libs/jquery-1.11.2.min.js" type="text/javascript"></script>
   <script type="text/javascript">
   	var htmlSources = [
-  		'text'//,
-      //'form',
-     // 'button'
+  		//'text',
+      //'list',
+      //'table',      
+     //'form',
+     //'button',
+     //'grid',
+     'flex'
   	];
   </script>
   <script src="js/playground.js" type="text/javascript"></script>

@@ -1,19 +1,105 @@
+.flat-buttons{
+  .btn{
+    .border-radius(0);
+  }
+}
+.rounded-buttons{
+  .btn{
+    .border-radius(@btn-line-height / 1.8);
+  }
+  .flat-buttons{
+    .btn{
+      .border-radius(0);
+    }
+  }
+}
+
+.circular-buttons{
+  .btn:not(.flat):not(.rounded){
+    width: @btn-line-height * 1.05;
+    .border-radius(52%);
+    padding: 0;
+    text-align: center;
+    overflow: hidden;
+  }
+  .rounded-buttons{
+    .btn{
+      .border-radius(@btn-line-height / 1.8);
+    }
+  }
+  .flat-buttons{
+    .btn{
+      .border-radius(0);
+    }
+  }
+}
+
 .btn {
   display: inline-block;
   line-height: @btn-line-height;
   padding: 0 @btn-padding;
   background-image: none;
-  background-color: @btn-background-color;
   cursor: pointer;
   text-align: center;
   vertical-align: middle;
   white-space: nowrap;
 
-  border: solid @btn-border-width @btn-border-color;
+  background-color: transparent;
+  color:@base-alt-color;
+  border: solid @btn-border-width transparent;
+
+  .border-radius(@round-border-radius);
 
   .user-select-none;
 
+
   &:hover {
     text-decoration: none;
+  }
+
+  // Colors
+  &.btn-primary{
+    .btn-color-construct(@primary-color, @primary-alt-color,@primary-color);
+  }
+  &.btn-secondary{
+    .btn-color-construct(@secondary-color, @secondary-alt-color,@secondary-color);
+  }
+  &.btn-grey{
+    .btn-color-construct(@grey-color, @grey-alt-color,@grey-color,darken);
+  }
+  &.btn-dark{
+    .btn-color-construct(@dark-color, @dark-alt-color,@dark-color);
+  }
+  &.btn-link{
+    .btn-color-construct(transparent, @link-color,transparent,underline);
+  }
+  &.btn-danger{
+    .btn-color-construct(@danger-color, @danger-alt-color,@danger-color,darken);
+  }
+  &.btn-warning{
+    .btn-color-construct(@warning-color, @warning-alt-color,@warning-color,darken);
+  }
+  &.btn-success{
+    .btn-color-construct(@success-color, @success-alt-color,@success-color,darken);
+  }
+  &.no-border{
+    border:none;
+  }
+  &.btn-3d{
+    box-shadow: inset 0 .2em .3em rgba(255,255,255,.8),inset 0 -0.2em .3em rgba(0,0,0,.3);    
+  }
+  // Shape
+  &.flat{
+    .border-radius(0);
+  }
+  &.rounded{
+    .border-radius(@btn-line-height / 1.8);
+  }
+  &.circular{
+    width: @btn-line-height * 1.05;
+    .border-radius(52%);
+    padding: 0;
+    text-align: center;
+    overflow: hidden;
   }
 }

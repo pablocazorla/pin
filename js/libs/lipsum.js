@@ -59,6 +59,10 @@ var Lipsum = (function() {
 		var r = ran(10,15);
 		return Lip.text(r) + '.';
 	};
+	Lip.num = function() {
+		var r = ran(0,9999);
+		return r;
+	};
 
 
 
