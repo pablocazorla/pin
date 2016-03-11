@@ -1,0 +1,68 @@
+.group{
+  display: inline-block;
+  .clearfix;
+  min-height: 1px;
+
+  & > *{
+    float: left;
+    display: block;
+    vertical-align: middle;
+  }
+
+
+
+  & > *{    
+    margin-left: 1px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:not(:first-child):not(:last-child) {
+      border-radius: 0;
+      & > * {
+        border-radius: 0;
+      }
+    }
+  }
+
+  & > input,
+  & > select{
+    width: auto;
+    margin-left: 0;
+    & + .btn{
+      margin-left: 0;
+    }
+  }
+  & > label{
+    line-height: @btn-line-height;
+    padding: 0 0.5 * @btn-padding;
+    margin-bottom: 0;
+    font-size: 100%;
+  }
+
+  &:not(.vertical) {
+    & > *:first-child {
+      margin-left: 0;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    & > *:last-child {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

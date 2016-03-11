@@ -12,7 +12,25 @@
     array( 'title' => 'Inputs',
       'items' => [
         array('title' => 'Form inputs', 'url' => 'form'),
-        array('title' => 'Buttons', 'url' => 'button')
+        array('title' => 'Buttons', 'url' => 'button'),
+        array('title' => 'Tags', 'url' => 'tags')
+      ]
+    ),
+    array( 'title' => 'Groups',
+      'items' => [
+        array('title' => 'What is a <i>group</i>', 'url' => 'group'),
+        array('title' => 'Dropdown', 'url' => 'dropdown'),
+        array('title' => 'Tabs', 'url' => 'tabs'),
+        array('title' => 'Menus', 'url' => 'menus'),
+        array('title' => 'Breadcrumbs', 'url' => 'breadcrumbs'),
+        array('title' => 'Pagination', 'url' => 'pagination')
+      ]
+    ),
+    array( 'title' => 'Float',
+      'items' => [
+        array('title' => 'Dropdown', 'url' => 'dropdown'),
+        array('title' => 'Tooltips', 'url' => 'tooltips'),
+        array('title' => 'Popups', 'url' => 'popups')
       ]
     ),
     array( 'title' => 'Layout',
@@ -22,38 +40,27 @@
         array('title' => 'Layout helpers', 'url' => 'layout-helpers')
       ]
     ),
+   
     array( 'title' => 'Navigation',
       'items' => [
-        array('title' => 'Button groups', 'url' => 'button-group'),
-        array('title' => 'Dropdown', 'url' => 'dropdown'),
-        array('title' => 'Tabs', 'url' => 'tabs'),
-        array('title' => 'Menus', 'url' => 'menus'),
-        array('title' => 'Headers', 'url' => 'headers'),
-        array('title' => 'Breadcrumbs', 'url' => 'breadcrumbs'),
-        array('title' => 'Pagination', 'url' => 'pagination')
+        array('title' => 'Headers', 'url' => 'headers')
       ]
     ),
     array( 'title' => 'Elements',
       'items' => [
         array('title' => 'Boxes', 'url' => 'boxes'),
-        array('title' => 'Tags', 'url' => 'tags'),
+        
         array('title' => 'Icons', 'url' => 'icons')
       ]
     ),
 
     array( 'title' => 'Components',
-      'items' => [
-        
-        
-        
-        
-        
+      'items' => [        
         array('title' => 'Alerts', 'url' => 'alerts'),
         
         array('title' => 'Embeb content', 'url' => 'embeb'),
         array('title' => 'Modal', 'url' => 'modal'),
-        array('title' => 'Tooltips', 'url' => 'tooltips'),
-        array('title' => 'Popups', 'url' => 'popups'),
+        
         array('title' => 'Expando', 'url' => 'expando'),
         array('title' => 'Accordion', 'url' => 'accordion'),
         array('title' => 'Sliders', 'url' => 'sliders'),
