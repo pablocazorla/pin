@@ -2,6 +2,7 @@
   display: inline-block;
   .clearfix;
   min-height: 1px;
+  border: 0;
 
   & > *{
     float: left;
@@ -18,16 +19,14 @@
       margin-left: 0;
     }
 
-    &:not(:first-child):not(:last-child) {
+    &:not(:first-child):not(:last-child),
+    &:not(:first-child):not(:last-child) > * {
       border-radius: 0;
-      & > * {
-        border-radius: 0;
-      }
     }
   }
 
-  & > input,
-  & > select{
+  &:not(.vertical) > input,
+  &:not(.vertical) > select{
     width: auto;
     margin-left: 0;
     & + .btn{
@@ -42,16 +41,78 @@
   }
 
   &:not(.vertical) {
-    & > *:first-child {
+    & > *:first-child,
+    & > *:first-child > * {
       margin-left: 0;
       border-top-right-radius: 0;
       border-bottom-right-radius: 0;
     }
-    & > *:last-child {
+    & > *:last-child,
+    & > *:last-child > * {
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
     }
   }
+  &.vertical{
+    display: block;
+    & > *{
+      float: none;
+      display: block;
+      width: 100%;
+      margin-left: 0;
+      margin-top: 1px;
+    }
+    & > *:first-child,
+    & > *:first-child > * {
+      margin-top: 0;
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+    & > *:last-child,
+    & > *:last-child > * {
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+    }
+    & > input,
+    & > select{
+      margin-top: 0;
+      & + .btn{
+        margin-top: 0;
+      }
+    }
+    & > select{
+      .box-sizing-border;
+      min-width: 0;
+    }
+    & > label{
+      padding-left: 0;
+    }
+  }
+  &.responsive,
+  &.flex {
+    display: block;
+    width: 100%;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    & > *{
+      //padding: 0;
+      width: auto;
+      -webkit-flex: 1 1 auto;
+      flex: 1 1 auto;
+      min-width: 0;
+      & > .btn {
+        width: auto;
+        padding: 0;
+      }
+    }
+    &.vertical {
+      flex-direction: column; 
+    }
+  }
+
 
 
 
