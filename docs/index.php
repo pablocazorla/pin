@@ -149,7 +149,10 @@
 
 
   <!-- PIN Javascript -->
+  <script src="../js/pin.boot.js" type="text/javascript"></script>
   <script src="../js/tabs.js" type="text/javascript"></script>
+  <script src="../js/popup.js" type="text/javascript"></script>
+  <script src="../js/pin.js" type="text/javascript"></script>
 
 
 
