@@ -1,0 +1,112 @@
+/* FLOATS **************/
+
+.float {
+  position: fixed;
+  z-index: 990;
+  left: 50%;
+  top: 50%;
+  width: 0;
+  height: 0;
+  .float-body {
+    position: absolute;
+    border: 1px solid transparent;
+    padding: @float-padding;
+    box-shadow: @float-shadow;
+    //
+    bottom: (1 * @float-arrow-width) + @float-gap;
+    left: 50%;
+    transform: translateX(-50%);
+    .float-arrow {
+      bottom: -2 * @float-arrow-width;
+      left: 50%;
+      margin-left: -1 * @float-arrow-width;
+      &,
+      & span {
+        position: absolute;
+        display: block;
+        width: 0;
+        height: 0;
+        border: @float-arrow-width solid transparent;
+      }
+      span {
+        top: (-1 * @float-arrow-width) - 2;
+        left: -1 * @float-arrow-width;
+      }
+    }
+    &.bottom {
+      top: (2 * @float-arrow-width) + @float-gap;
+      bottom: auto;
+      .float-arrow {
+        top: -2 * @float-arrow-width;
+        bottom: auto;
+        span {
+          top: (-1 * @float-arrow-width) + 2;
+        }
+      }
+    }
+    &.left {
+      right: auto;
+      transform: none;
+      left: -1 * (@float-arrow-width + @float-arrow-left);
+      .float-arrow {
+        margin-left: 0;
+        right: auto;
+        left: @float-arrow-left;
+      }
+    }
+    &.right {
+      right: -1 * (@float-arrow-width + @float-arrow-left);
+      left: auto;
+      transform: none;
+      .float-arrow {
+        margin-left: 0;
+        right: @float-arrow-left;
+        left: auto;
+      }
+    }
+    // Skins
+    &.popup {
+      background-color: @float-popup-background-color;
+      border-color: @float-popup-border-color;
+      max-width: 300px;
+      .float-arrow {
+        border-color: @float-popup-border-color transparent transparent;
+        span {
+          border-color: @float-popup-background-color transparent transparent;
+        }
+      }
+      &.bottom {
+        .float-arrow {
+          border-color: transparent transparent @float-popup-border-color;
+          span {
+            border-color: transparent transparent @float-popup-background-color;
+          }
+        }
+      }
+    }
+    &.tooltip {
+      background-color: @float-tooltip-background-color;
+      color: @float-tooltip-color;
+      border-color: @float-tooltip-border-color;
+      max-width: 300px;
+      font-size:75%;
+      line-height: 1.2;
+      text-align: center;
+      border-radius: @float-tooltip-border-radius;
+      .float-arrow {
+        border-color: @float-tooltip-border-color transparent transparent;
+        span {
+          border-color: @float-tooltip-background-color transparent transparent;
+        }
+      }
+      &.bottom {
+        .float-arrow {
+          border-color: transparent transparent @float-tooltip-border-color;
+          span {
+            border-color: transparent transparent @float-tooltip-background-color;
+          }
+        }
+      }
+    }
+  }
+}

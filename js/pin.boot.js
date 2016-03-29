@@ -10,27 +10,57 @@ pin = (function($) {
 			if (typeof callback == 'function') {
 				onInitList.push(callback);
 			}
-		},
-		data:function(srt){
-
 		}
 	};
-	pin.init(function(){
-		$('*[data-pin]').each(function(){
-				var $this = $(this),
-				txt = 'popup:{content:#cont-popup,pablo:cazu,aaa:{cosas:otra}}';
+
+	var parseData = function(str) {
+		str = '{' + str + '}'
+		var datastring = str
+			.replace(/"/g, '')
+			.replace(/'/g, '')
+			.replace(/ :/g,':')
+			.replace(/: /g,':')
+			.replace(/ ,/g,',')
+			.replace(/, /g,',')
+
+			.replace(/ {/g,'{')
+			.replace(/{ /g,'{')
+
+			.replace(/ }/g,'}')
+			.replace(/} /g,'}')
 
 
 
 
-				var	datastring = '{"' + txt.replace(/:/g,'":"').replace(/{/g,'{"').replace(/}/g,'"}').replace(/,/g,'","')
-				.replace(/:"{/g,':{').replace(/}"}/g,'}}') +'}';
 
-console.log(datastring);
 
-				var aaa = $.parseJSON(datastring);
+			.replace(/:/g, '":"')
+			.replace(/{/g, '{"')
+			.replace(/}/g, '"}')
+			.replace(/,/g, '","')
+			.replace(/:"{/g, ':{')
+			.replace(/}"}/g, '}}')
+			.replace(/}",/g, '},')
+			.replace(/"true"/g, 'true')
+			.replace(/"false"/g, 'false');
+			/"/;
 
-					console.log(aaa);
+			console.log(datastring);
+		return $.parseJSON(datastring);
+	};
+
+	pin.init(function() {
+		$('*[data-pin]').each(function() {
+			var $this = $(this),
+				obj = parseData($this.attr('data-pin'));
+
+				for(var a in obj){
+					if(typeof $this[a] == 'function'){
+						var b = obj[a];
+						$this[a](b);
+					}
+				}
+
 		});
 	});
 
