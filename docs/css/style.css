@@ -105,3 +105,9 @@ hr{
 	margin-bottom: 20px;
 	overflow: hidden;
 }
+.parallax-example{
+	color:#FFF;
+	padding: 200px 20px;
+	text-align: center;
+	margin-bottom: 30px;
+}

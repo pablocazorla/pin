@@ -1,4 +1,5 @@
 <?php
+  $titlePage = 'Pin';
   $list = [
     array( 'title' => 'Basic',
       'items' => [
@@ -56,6 +57,8 @@
 
     array( 'title' => 'Components',
       'items' => [        
+        array('title' => 'Waves', 'url' => 'waves'),
+        array('title' => 'Parallax', 'url' => 'parallax'),
         array('title' => 'Alerts', 'url' => 'alerts'),
         
         array('title' => 'Embeb content', 'url' => 'embeb'),
@@ -92,11 +95,13 @@
         $existsCurrent = true;
         $isActive = ' class="active"';
         $href = '';
+        $titlePage .= ' | ' . $list[$i]['items'][$j]['title'];
       }
       $menu .= '<li>';
       $menu .= '<a'.$href.$isActive.'>'.$list[$i]['items'][$j]['title'].'</a>';
 
       $menu .= '</li>';
+
     }
     $menu .= '</ul>';
     $menu .= '</div>';
@@ -110,7 +115,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Pin</title>
+  <title><?php echo $titlePage;?></title>
   <meta name="description" content="">
   <meta name="keywords" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -151,7 +156,10 @@
   <!-- PIN Javascript -->
   <script src="../js/pin.boot.js" type="text/javascript"></script>
   <script src="../js/tabs.js" type="text/javascript"></script>
+  <script src="../js/waves.js" type="text/javascript"></script>
   <script src="../js/popup.js" type="text/javascript"></script>
+  <script src="../js/dropdown.js" type="text/javascript"></script>
+  <script src="../js/parallax.js" type="text/javascript"></script>
   <script src="../js/pin.js" type="text/javascript"></script>
 
 

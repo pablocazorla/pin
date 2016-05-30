@@ -1,0 +1,78 @@
+/**** FLEX ********************/
+
+.wave {
+  position: relative;
+  .wave-cont {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    .wave-rip {
+      position: absolute;
+      display: block;
+      width: 1px;
+      height: 1px;
+      background-color: #FFF;
+      opacity: 0;
+      border-radius: 50%;
+      &.waving {
+        .animation(wave-anim 0.4s ease-out 1);
+      }
+    }
+  }
+}
+@-webkit-keyframes wave-anim {
+  0% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  80% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(200);
+  }
+}
+@-moz-keyframes wave-anim {
+  0% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  80% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(200);
+  }
+}
+@-o-keyframes wave-anim {
+  0% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  80% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(200);
+  }
+}
+@keyframes wave-anim {
+  0% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  80% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(200);
+  }
+}

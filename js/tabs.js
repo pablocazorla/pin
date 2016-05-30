@@ -43,8 +43,10 @@
 	};
 
 	// PIN
-	pin.init(function(){
-		$('.tab-buttons').tabs();
-	});
+	if(typeof pin != 'undefined' && typeof pin.init != 'undefined'){
+		pin.init(function(){
+			$('.tab-buttons').tabs();
+		});
+	}
 })(jQuery);
 
